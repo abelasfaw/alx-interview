@@ -8,15 +8,14 @@ def minOperations(n: int) -> int:
     needed to result in exaclty n H
     characters in the file
     """
-    ops = 0
+    character_count = 1
+    copy_ops = 0
+    paste_ops = 0
 
-    if n <= 1:
-        return ops
-
-    for i in range(2, n + 1):
-        while (n % i == 0):
-            ops = ops + i
-            n = n / i
-            if n < i:
-                break
-    return ops
+    while character_count < n:
+        if (n % character_count == 0):
+            copy_ops += 1
+            copied = character_count
+        paste_ops += 1
+        character_count += copied
+    return copy_ops + paste_ops
