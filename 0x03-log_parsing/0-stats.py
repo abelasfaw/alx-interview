@@ -39,3 +39,5 @@ if __name__ == '__main__':
         print_metrics()
         sys.stderr.flush()
         traceback.print_exc()
+    finally:
+        print_metrics()
