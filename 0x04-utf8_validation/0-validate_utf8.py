@@ -64,6 +64,6 @@ def validUTF8(data):
                     return False
             else:
                 return False
-        else:
+        elif (binary_form.startswith('10')):
             return False
     return isValid
