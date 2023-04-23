@@ -37,4 +37,6 @@ def validUTF8(data):
                 return False
             if (trailing_bytes == 0):
                 start_byte = True
+    if (trailing_bytes != 0):
+        return False
     return True
