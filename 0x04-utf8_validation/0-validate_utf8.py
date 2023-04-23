@@ -32,7 +32,7 @@ def validUTF8(data):
         elif (binary_form.startswith('110')):
             # print("2:byte")
             if (i + 1 < len(data)):
-                next_byte = covertToBinary(data[i+1])
+                next_byte = convertToBinary(data[i+1])
                 # print(next_byte)
                 if (startsWith10([next_byte])):
                     i = i + 1
